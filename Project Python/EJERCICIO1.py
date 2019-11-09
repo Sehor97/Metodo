@@ -11,12 +11,12 @@ class ejercicio1:
         self.b = 0
 
     def infuncion(self,x):
-        self.funcion = self.euler**x + x
+        self.funcion = self.euler**float(x) + float(x)
 
         return self.funcion
 
     def inderivada(self,x):
-        self.derivada = self.euler**x +1
+        self.derivada = self.euler**float(x) +1
 
         return self.derivada
 
@@ -26,7 +26,7 @@ class ejercicio1:
         print ('metodo de Newton Raphson')
         print ('ingrese el valor para x0:  ')
         nwrps.x = input()
-        nwrps.xk = nwrps.x - nwrps.infuncion(nwrps.x) / nwrps.inderivada(nwrps.x)
+        nwrps.xk = float(nwrps.x) - nwrps.infuncion(nwrps.x) / nwrps.inderivada(nwrps.x)
         n = 0
         while n < 1:
             temp = nwrps.xk
@@ -69,5 +69,4 @@ class ejercicio1:
 
 Run = ejercicio1()
 Run.NewtonRaphson()
-print ('\n --------------------------------------- \n')
-Run.RegulaFalsi()
+
